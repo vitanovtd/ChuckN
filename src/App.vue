@@ -15,8 +15,11 @@
       <router-view />
     </main>
 
-    <footer>
-      Chuck Norris memes app.
+    <footer class="footer">
+      <div class="container">
+        <p>Chuck Norris memes app.</p>
+        <p>&copy; Your Memes</p>
+      </div>
     </footer>
 
   </div>

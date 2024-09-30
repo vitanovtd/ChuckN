@@ -3,45 +3,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem; 
 }
 
 .joke-content {
   background-color: $background-color;
-  padding: 2rem;
+  padding: 1.5rem; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0; 
+  max-width: 500px; 
+  margin-bottom: 1.5rem; 
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem; 
     color: $text-color;
   }
 
   .btn {
-    font-size: 1.5rem;
-    margin-top: 1rem; 
+    font-size: 1.2rem; 
+    margin-top: 0.5rem;
   }
 }
 
 .btn-primary {
-  align-self: center; 
-  margin-top: 2rem;
+  margin-top: 1rem; 
 }
 
-
 select {
-  margin-bottom: 2rem; 
+  margin-bottom: 1.5rem; 
+  font-size: 1.2rem; 
 }
 
 button {
-  cursor: pointer; 
-}
-
-.joke-content {
-  max-width: 600px;
-  text-align: center;
+  cursor: pointer;
 }

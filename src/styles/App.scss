@@ -1,47 +1,65 @@
 .logo {
-    height: 4rem;
+  height: 3rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $background-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  font-weight: bold;
+  color: $primary-color;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  text-decoration: none !important;
+
+  &:hover {
+    background-color: adjust-color($primary-color, $lightness: 25%);
+    border-radius: 5px;
+    color: white;
   }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: $background-color;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    position: sticky; 
-    top: 0;
-    z-index: 1000; 
+}
+
+main {
+  padding: 2rem 0;
+  min-height: 70vh;
+}
+
+.footer {
+  background-color: $secondary-color;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+
+  p {
+    margin: 0.5rem 0;
   }
-  
-  .navbar-brand {
-    flex-shrink: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: $primary-color;
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
   }
-  
-  .navbar-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
-  }
-  
-  .nav-link {
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    color: $primary-color;
-    transition: color 0.3s ease, background-color 0.3s ease; 
-  
-    &:hover {
-      background-color: adjust-color($primary-color, $lightness: 40%);
-      border-radius: 5px;
-      color: white;
-    }
-  }
-  
-  
-  main {
-    padding: 2rem;
-  }
-  
+}

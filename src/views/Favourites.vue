@@ -27,14 +27,9 @@ export default {
     const favourites = computed(() => favouritesStore.favourites);
     console.log(favouritesStore.favourites);
 
-    // const isFavourite = (jokeId: string) => {
-    //   return favouritesStore.favourites.some(fav => fav.id === jokeId);
-    // };
-
     return {
       favourites,
       removeFromFavourites: favouritesStore.removeFromFavourites,
-      // isFavourite,
     };
   }
 };
