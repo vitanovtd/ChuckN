@@ -1,0 +1,118 @@
+@import 'variables';
+@import 'mixins';
+
+html, body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6; 
+  font-size: 1.6rem; 
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  line-height: 1.2;
+  margin-bottom: $spacer-2;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: adjust-color($primary-color, $lightness: -10%);
+    text-decoration: underline;
+  }
+}
+
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+
+  &.btn-primary {
+    background-color: $primary-color;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: adjust-color($primary-color, $lightness: -10%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    }
+
+    &:active {
+      transform: translateY(0); 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $secondary-color;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: adjust-color($secondary-color, $lightness: -10%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+
+p {
+  font-size: 1.2rem; 
+  margin-bottom: $spacer-2;
+}
+
+
+.mt-1 { margin-top: $spacer-1; }
+.mt-2 { margin-top: $spacer-2; }
+.mt-3 { margin-top: $spacer-3; }
+.mt-4 { margin-top: $spacer-4; }
+
+.mb-1 { margin-bottom: $spacer-1; }
+.mb-2 { margin-bottom: $spacer-2; }
+.mb-3 { margin-bottom: $spacer-3; }
+.mb-4 { margin-bottom: $spacer-4; }
+
+
+.container {
+  max-width: 960px; 
+  margin: 0 auto;
+  padding: 0 $spacer-3;
+}
+
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 1.8rem;
+    line-height: 1.75;
+  }
+
+  h1 {
+    font-size: 3.5rem; 
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+}

@@ -1,0 +1,45 @@
+.favourites {
+  text-align: center;
+
+  .card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 100%; 
+  }
+
+  .card {
+    background-color: $background-color;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33.333% - 2rem); /* Set card width to 1/3 of the row, */
+    margin: 1rem;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-text {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      font-size: 1.5rem;
+      padding: 0.75rem 1.25rem;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 calc(100% - 2rem); 
+    }
+  }
+}
