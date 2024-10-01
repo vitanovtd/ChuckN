@@ -1,9 +1,9 @@
 <template>
   <div class="favourites">
     <h2>Your Jokes Tuk!</h2>
-    <div class="row mt-4">
+    <div class="row">
       <div v-if="favourites.length === 0"> No favourite jokes have been selected</div>
-      <div class="col-md-4" v-for="joke in favourites" :key="joke.id">
+      <div class="col" v-for="joke in favourites" :key="joke.id">
         <div class="card mb-3">
           <div class="card-body">
             <p class="card-text">{{ joke.value }}</p>
