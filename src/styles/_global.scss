@@ -1,19 +1,25 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
-html, body {
+html,
+body {
   font-family: $font-family;
   background-color: $background-color;
   color: $text-color;
   margin: 0;
   padding: 0;
-  line-height: 1.5; 
-  font-size: 1.4rem; 
+  line-height: 1.5;
+  font-size: 1.4rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $primary-color;
-  line-height: 1.3; 
+  line-height: 1.3;
   margin-bottom: $spacer-2;
 }
 
@@ -30,7 +36,7 @@ a {
 button {
   font-family: inherit;
   font-size: 1rem;
-  padding: 0.5rem 1rem; 
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: $border-radius-lg;
   cursor: pointer;
@@ -71,15 +77,31 @@ p {
   margin-bottom: $spacer-2;
 }
 
-.mt-1 { margin-top: $spacer-1; }
-.mt-2 { margin-top: $spacer-2; }
-.mt-3 { margin-top: $spacer-3; }
-.mt-4 { margin-top: $spacer-4; }
+.mt-1 {
+  margin-top: $spacer-1;
+}
+.mt-2 {
+  margin-top: $spacer-2;
+}
+.mt-3 {
+  margin-top: $spacer-3;
+}
+.mt-4 {
+  margin-top: $spacer-4;
+}
 
-.mb-1 { margin-bottom: $spacer-1; }
-.mb-2 { margin-bottom: $spacer-2; }
-.mb-3 { margin-bottom: $spacer-3; }
-.mb-4 { margin-bottom: $spacer-4; }
+.mb-1 {
+  margin-bottom: $spacer-1;
+}
+.mb-2 {
+  margin-bottom: $spacer-2;
+}
+.mb-3 {
+  margin-bottom: $spacer-3;
+}
+.mb-4 {
+  margin-bottom: $spacer-4;
+}
 
 .container {
   max-width: 960px;

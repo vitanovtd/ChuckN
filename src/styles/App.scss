@@ -1,5 +1,5 @@
 .logo {
-  height: 3rem;
+  height: 3rem; /* Default size for mobile */
 }
 
 .navbar {
@@ -12,33 +12,38 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-}
 
-.navbar-brand {
-  flex-shrink: 0;
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: $primary-color;
-}
+  .navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
 
-.navbar-nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1.5rem;
-}
+  .nav-link {
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    font-weight: bold;
+    color: $primary-color;
+    transition: color 0.3s ease, background-color 0.3s ease;
 
-.nav-link {
-  text-decoration: none;
-  padding: 0.4rem 0.8rem;
-  font-weight: bold;
-  color: $primary-color;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  text-decoration: none !important;
+    &:hover {
+      background-color: adjust-color($primary-color, $lightness: 25%);
+      border-radius: 5px;
+      color: white;
+    }
+  }
 
-  &:hover {
-    background-color: adjust-color($primary-color, $lightness: 25%);
-    border-radius: 5px;
-    color: white;
+  // Media Queries
+  @media (min-width: 768px) {
+    .logo {
+      height: 4rem; /* Slightly bigger on tablets */
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .logo {
+      height: 5rem; /* Bigger logo for large screens */
+    }
   }
 }
 
